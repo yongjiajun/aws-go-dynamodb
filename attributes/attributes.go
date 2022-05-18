@@ -36,3 +36,10 @@ func Binary(b []byte) *dynamodb.AttributeValue {
 		B: b,
 	}
 }
+
+// List returns dynamodb.AttributeValue for List.
+func List(v ...*dynamodb.AttributeValue) *dynamodb.AttributeValue {
+	return &dynamodb.AttributeValue{
+		L: v,
+	}
+}
